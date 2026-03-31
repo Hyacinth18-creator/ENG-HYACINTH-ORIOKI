@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyacinth Orioki | Software Engineer & Creative Technologist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;1,9..144,300&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="loader-name" id="loader-name">Hyacinth Orioki<span style="color:var(--accent)">.</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-counter" id="loader-counter">000</div>
+  </div>
+
+  <div id="cursor">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="30" height="30" rx="4" fill="var(--charcoal)" stroke="var(--accent)"
+        stroke-width="1.5" />
+      <text x="6" y="22" font-family="monospace" font-size="14" fill="var(--accent)" font-weight="bold">&lt;/&gt;</text>
+    </svg>
+  </div>
+
+  <div id="proj-hover-img"><img src="" alt="" id="proj-hover-src" /></div>
+
+  <nav id="navbar">
+    <a href="#" class="nav-logo">ho<span>.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:hyacinthonchngu@gmail.com" class="nav-cta">Hire Me</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="mailto:hyacinthonchngu@gmail.com">Hire Me →</a>
+  </div>
+
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-number" aria-hidden="true">01</div>
+
+    <div class="hero-index reveal">
+      <span>Software Engineer</span>
+      <span>&amp; Creative Technologist</span>
+    </div>
+
+    <h1 class="hero-title">
+      <div class="overflow-hidden"><span class="title-line block">Hyacinth</span></div>
+      <div class="overflow-hidden"><span class="title-line block"><em class="serif-word">Onchangu</em></span></div>
+      <div class="overflow-hidden"><span class="title-line block outline-text">Orioki.</span></div>
+    </h1>
+
+    <div class="hero-bottom reveal">
+      <div>
+        <div class="hero-desc">
+          Bridging technology, business,<br>
+          and community impact through<br>
+          <strong style="color:var(--charcoal)">code, AI &amp; creative design.</strong>
+        </div>
+        <div class="hero-availability" style="margin-top:1.5rem; display:inline-flex;">
+          <div class="hero-dot"></div>
+          Available for innovative collaborations
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <span class="marquee-item">Python</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">AI Integration</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Graphic Design</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Branding</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">SQL</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Software Architecture</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Google Dev Ecosystem</span><span class="marquee-item marquee-sep">✦</span>
+      <span class="marquee-item">Mentorship</span><span class="marquee-item marquee-sep">✦</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div>
+      <div class="section-label reveal">About Me</div>
+      <h2 class="about-title reveal">
+        Building<br>
+        <em>impactful</em><br>
+        digital solutions
+      </h2>
+      <p class="about-text reveal">
+        I am a Software Engineering student at Kisii University and the founder of Brandfy. My work lives at the intersection of coding, AI-assisted development, and strategic branding. From winning hackathons to mentoring youth at the Kisii Ajiry Centre, I am committed to driving measurable growth through technology.
+      </p>
+      <div class="about-stats reveal">
+        <div class="stat-box">
+          <div class="stat-num" data-count="2">0</div>
+          <div class="stat-label">Years of Dev</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="10">0</div>
+          <div class="stat-label">Design Clients</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="50">0</div>
+          <div class="stat-label">Youth Mentored</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num" data-count="1">0</div>
+          <div class="stat-label">Company Founded</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-right reveal">
+      <div class="skills-group">
+        <div class="skills-group-title">Core Engineering</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Software Design</span></div>
+          <div class="skill-tag"><span>AI-Assisted Coding</span></div>
+          <div class="skill-tag"><span>Python</span></div>
+          <div class="skill-tag"><span>SQL Triggers</span></div>
+          <div class="skill-tag"><span>SDLC</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Creative & Branding</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Graphic Design</span></div>
+          <div class="skill-tag"><span>Brand Identity</span></div>
+          <div class="skill-tag"><span>UI/UX Principles</span></div>
+          <div class="skill-tag"><span>Creative Lead</span></div>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-title">Ecosystems</div>
+        <div class="skills-tags">
+          <div class="skill-tag"><span>Google Developers</span></div>
+          <div class="skill-tag"><span>Club Innovate</span></div>
+          <div class="skill-tag"><span>AgriFusion</span></div>
+          <div class="skill-tag"><span>Ajiry Centre</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="projects-header">
+      <div class="reveal">
+        <div class="section-label">Selected Work</div>
+        <div class="projects-title">Innovations<br><span
+            style="font-family:var(--font-serif);font-weight:300;font-style:italic;color:var(--accent);">&amp; Impact</span></div>
+      </div>
+      <div class="projects-count reveal">03 Highlights</div>
+    </div>
+
+    <div id="project-list">
+      <div class="project-item reveal" data-img="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&q=80">
+        <div class="project-num">01</div>
+        <div>
+          <div class="project-name">Hospital Management System</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Hackathon project: Integrated AI for patient care and data integrity</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">AI</span>
+          <span class="tech-badge">Database Management</span>
+        </div>
+      </div>
+
+      <div class="project-item reveal" data-img="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80">
+        <div class="project-num">02</div>
+        <div>
+          <div class="project-name">Brandfy Identity Suite</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Branding for Shwari Home Stays and Gucha</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Branding</span>
+          <span class="tech-badge">Creative Strategy</span>
+        </div>
+      </div>
+
+      <div class="project-item reveal" data-img="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80">
+        <div class="project-num">03</div>
+        <div>
+          <div class="project-name">Kenya AI-Assisted Coding</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-top:4px;">Championship finalist: Real-world problem solving with AI</div>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">AI Integration</span>
+          <span class="tech-badge">Logic</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-label reveal">Experience &amp; Recognition</div>
+
+    <div class="exp-grid">
+      <div class="exp-timeline reveal">
+        <div class="exp-item">
+          <div class="exp-year">2024 — Present</div>
+          <div class="exp-role">Founder &amp; Creative Lead</div>
+          <div class="exp-company">Brandfy</div>
+          <div class="exp-desc">Delivering branding and digital communication solutions for real estate and local enterprises.</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-year">2023 — Present</div>
+          <div class="exp-role">Youth Mentor</div>
+          <div class="exp-company">Kisii Ajiry Centre</div>
+          <div class="exp-desc">Training local youth in digital skills, career guidance, and mental health awareness.</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-year">2023 — Present</div>
+          <div class="exp-role">Active Member</div>
+          <div class="exp-company">Club Innovate &amp; Google Developers</div>
+          <div class="exp-desc">Engaging in community-driven tech projects and leveraging global developer tools.</div>
+        </div>
+      </div>
+
+      <div class="exp-right reveal">
+        <div class="exp-big-text">
+          Bridging tech<br>and <em>community.</em>
+        </div>
+        <div class="section-label">Recognitions</div>
+        <ul class="awards-list">
+          <li class="award-item">
+            <div>
+              <div class="award-name">Finalist</div>
+              <div class="award-org">Kenya AI-Assisted Coding Championship</div>
+            </div>
+            <div class="award-year">2024</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">Google Developer Member</div>
+              <div class="award-org">Certified Community Badges</div>
+            </div>
+            <div class="award-year">2024</div>
+          </li>
+          <li class="award-item">
+            <div>
+              <div class="award-name">KCSE B+ Distinction</div>
+              <div class="award-org">Moi High School, Gesusu</div>
+            </div>
+            <div class="award-year">2021</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-inner">
+      <div>
+        <div class="section-label reveal">Get In Touch</div>
+        <div class="contact-big reveal">
+          Let's<br>
+          <em>innovate</em><br>
+          together.
+        </div>
+        <p class="contact-sub reveal">
+          Whether you're looking for a software solution, brand identity, or want to collaborate on community projects.
+        </p>
+        <div class="contact-links reveal">
+          <a href="mailto:hyacinthonchngu@gmail.com" class="contact-link">
+            <div>
+              <div class="contact-link-name">Email</div>
+              <div class="contact-link-handle">hyacinthonchngu@gmail.com</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/hyacinth-onchangu-a9a427322" target="_blank" class="contact-link">
+            <div>
+              <div class="contact-link-name">LinkedIn</div>
+              <div class="contact-link-handle">in/hyacinth-onchangu</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="#" class="contact-link">
+            <div>
+              <div class="contact-link-name">Phone</div>
+              <div class="contact-link-handle">+254 768-207-683</div>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M1 17L17 1M17 1H4M17 1V14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <div class="section-label">Send A Message</div>
+        <form onsubmit="handleFormSubmit(event)" style="margin-top:2rem;">
+          <div class="form-row">
+            <label class="form-label" for="fname">Your Name</label>
+            <input type="text" id="fname" class="form-input" placeholder="Enter name" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="femail">Email Address</label>
+            <input type="email" id="femail" class="form-input" placeholder="your@email.com" required />
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="fmsg">Message</label>
+            <textarea id="fmsg" class="form-textarea" rows="4" placeholder="How can I help you?"
+              required></textarea>
+          </div>
+          <button type="submit" class="form-submit"><span>Send Message →</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-left">© 2026 Hyacinth Orioki. All rights reserved.</div>
+    <div class="footer-logo">ho<span>.</span>dev</div>
+    <div class="footer-right">Software Engineer | Creative Technologist</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
