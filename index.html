@@ -307,6 +307,39 @@
     </div>
   </section>
 
+  <section id="feedback">
+    <div class="section-label reveal">Feedback</div>
+    <h2 class="feedback-title reveal">Drop a like, leave a comment, and sign your name.</h2>
+
+    <div class="feedback-grid reveal">
+      <div class="feedback-panel">
+        <div class="feedback-actions">
+          <button id="likeBtn" type="button" class="like-btn">Like <span id="likeCount">0</span></button>
+          <p class="feedback-note">Tap like if you enjoyed the page. Your support means a lot.</p>
+        </div>
+
+        <form id="commentForm" class="feedback-form">
+          <div class="form-row">
+            <label class="form-label" for="commentName">Your name</label>
+            <input id="commentName" class="form-input" type="text" placeholder="Enter your name">
+          </div>
+          <div class="form-row">
+            <label class="form-label" for="commentText">Comment</label>
+            <textarea id="commentText" class="form-textarea" rows="4" placeholder="Write something nice..." required></textarea>
+          </div>
+          <button class="form-submit" type="submit"><span>Post Comment →</span></button>
+        </form>
+      </div>
+
+      <div class="feedback-list-wrap">
+        <div class="feedback-summary">Recent comments</div>
+        <div id="commentList" class="feedback-list">
+          <div class="feedback-empty">No comments yet. Be the first to say hello.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="contact-inner">
       <div>
